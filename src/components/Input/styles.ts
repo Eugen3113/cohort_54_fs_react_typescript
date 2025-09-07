@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 interface InputComponentProps {
   $error?: string | undefined;
+  disabled?: boolean;
 }
 
 const generateInputBorder = (
@@ -16,6 +17,52 @@ const generateInputBorder = (
     } else {
       return "#3f3f3f";
     }
+  }
+};
+
+
+
+const getBackground = ({ disabled }: InputComponentProps) => {
+  if (disabled) {
+    return "#f3f4f6";
+  } else {
+    return "#ffffff";
+  }
+};
+
+const getColor = ({ disabled }: InputComponentProps) => {
+  if (disabled) {
+    return "#6b7280";
+  } else {
+    return "#111827";
+  }
+};
+
+const getCursor = ({ disabled }: InputComponentProps) => {
+  if (disabled) {
+    return "not-allowed";
+  } else {
+    return "text";
+  }
+};
+
+const getFocusBorderColor = ({ $error, disabled }: InputComponentProps) => {
+  if (disabled) {
+    return "#d1d5db";
+  } else if ($error) {
+    return "#dc2626";
+  } else {
+    return "#2563eb";
+  }
+};
+
+const getFocusBoxShadow = ({ $error, disabled }: InputComponentProps) => {
+  if (disabled) {
+    return "transparent";
+  } else if ($error) {
+    return "rgba(239,68,68,0.15)";
+  } else {
+    return "rgba(37,99,235,0.15)";
   }
 };
 
@@ -43,6 +90,12 @@ export const InputComponent = styled.input<InputComponentProps>`
   &::placeholder {
     color: #6f6f6f;
     font-size: 16px;
+  }
+
+      &:focus {
+    border-color: ${getFocusBorderColor};
+    box-shadow: 0 0 0 3px ${getFocusBoxShadow};
+    outline: none;
   }
 `;
 

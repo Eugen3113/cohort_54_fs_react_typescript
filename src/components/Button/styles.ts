@@ -36,8 +36,9 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   align-items: center;
   justify-content: center;
   outline: none;
-  border: none;
-  padding: 0;
+  border: 1px solid black;
+  border-radius: 4px;
+  /* padding: 2px; */
   height: 70px;
   width: 100%;
   background-color: ${({ $isRed, disabled }) =>
