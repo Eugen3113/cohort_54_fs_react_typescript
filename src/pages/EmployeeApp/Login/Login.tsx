@@ -1,8 +1,8 @@
 import LoginForm from "components/LoginForm/LoginForm";
 
-import { PageWrapper } from "./styles";
+import { PageWrapper } from "./styles"
 
-function LogIn() {
+function Login() {
   return (
     <PageWrapper>
       <LoginForm />
@@ -10,4 +10,4 @@ function LogIn() {
   );
 }
 
-export default LogIn;
+export default Login;

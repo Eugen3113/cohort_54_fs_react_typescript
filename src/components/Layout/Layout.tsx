@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";   //! 3.
 
 import {
   LayoutWrapper,
@@ -16,15 +16,15 @@ import {
 import { type LayoutProps } from "./types";
 
 function Layout({ children }: LayoutProps) {
-  const navigate = useNavigate();
+  const navigate = useNavigate();   //!  4. useNavigate() возврвщает фу-ю
 
-  const goToHomePage = () => {
-    navigate("/");
-  };
+  const goToHomePage = () => {    //! 1. создадим фу-ю goToHomePage, с её помощью переходим на главную страницу
+    navigate("/");                //!  5. путь куда идти (переходим на главную страницу)
+  };                              //!  2. нажимая на Logo строка 27 
   return (
-    <LayoutWrapper>
-      <Header>
-        <Logo onClick={goToHomePage}>
+    <LayoutWrapper> 
+      <Header>     
+        <Logo onClick={goToHomePage}>  
           <LogoImg
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOGDYH2tzlcwZSDpjg0qRGgEHAxVhsKHFUg&s"
             alt="Logo"
@@ -32,9 +32,9 @@ function Layout({ children }: LayoutProps) {
         </Logo>
         <NavigationContainer>
           <HeaderLink
-            style={({ isActive }) => ({
-              fontWeight: isActive ? "bold" : "normal",
-              textDecoration: isActive ? "underline" : "none",
+            style={({ isActive }) => ({                          //?если жмём на ссылку, мы увидим что она активна
+              fontWeight: isActive ? "bold" : "normal",           //? будет жирный шрифт
+              textDecoration: isActive ? "underline" : "none",     //? и будет подчёркнута снизу 
             })}
             to="/"
           >
@@ -67,6 +67,15 @@ function Layout({ children }: LayoutProps) {
           >
             Login
           </HeaderLink>
+          <HeaderLink
+            to="/clients"
+            style={({ isActive }) => ({
+              fontWeight: isActive ? "bold" : "normal",
+              textDecoration: isActive ? "underline" : "none",
+            })}
+          >
+            Clients
+          </HeaderLink>
         </NavigationContainer>
       </Header>
       <Main>{children}</Main>
@@ -82,6 +91,7 @@ function Layout({ children }: LayoutProps) {
           <FooterLink to="/contactUs">Contact Us</FooterLink>
           <FooterLink to="/about">About</FooterLink>
           <FooterLink to="/login">Login</FooterLink>
+          <FooterLink to="/clients">Clients</FooterLink>
         </FooterNavigation>
       </Footer>
     </LayoutWrapper>
