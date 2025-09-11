@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { ButtonControl, PageWrapper, Title } from "./styles";
+import ClientTemplate from "pages/EmployeeApp/Clients/components/ClientTeamlate/ClientTemplete";
+import { ButtonControl, Title } from "./styles";
 import Button from "components/Button/Button";
 
 export default function Facebook() {
@@ -10,7 +11,7 @@ export default function Facebook() {
   };
 
   return (
-    <PageWrapper>
+    <ClientTemplate>
       <Title>Facebook</Title>
       <p>
         Facebook is a social media company founded in 2004 by Mark Zuckerberg
@@ -22,6 +23,6 @@ export default function Facebook() {
       <ButtonControl>
         <Button onClick={goBack} name="Go back" />
       </ButtonControl>
-    </PageWrapper>
+    </ClientTemplate>
   );
 }

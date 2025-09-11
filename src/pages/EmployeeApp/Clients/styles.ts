@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 export const PageWrapper = styled.div`
   display: flex;
@@ -9,8 +10,19 @@ export const PageWrapper = styled.div`
 `;
 
 export const Title = styled.p`
-  color:  #0c5580ff;
+  color: #0c5580ff;
   font-size: 35px;
   font-weight: bold;
-  
+`;
+
+export const NavContainer = styled.nav`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`;
+
+export const ClientsLink = styled(Link)`
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
 `;

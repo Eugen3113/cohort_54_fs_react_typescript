@@ -1,15 +1,25 @@
-import { Link } from "react-router-dom";
-import { Title } from "./styles"
+import { useEffect } from "react";
+import { ROUTES } from "constants/routes";
+import { PageWrapper, NavContainer, ClientsLink, Title } from "./styles";
 
-export default function Clients() {
+function Clients() {
+  useEffect(() => {
+    return () => {
+      console.log("Unmounting Clients Component");
+    };
+  }, []);
+
   return (
-    <div>
+    <PageWrapper>
       <Title>Our Clients</Title>
-      <ul>
-        <li><Link to="/clients/facebook">Facebook</Link></li>
-        <li><Link to="/clients/google">Google</Link></li>
-        <li><Link to="/clients/amazon">Amazon</Link></li>
-      </ul>
-    </div>
+      <NavContainer>
+        <ClientsLink to={ROUTES.APPLE}>Apple</ClientsLink>
+        <ClientsLink to={ROUTES.FACEBOOK}>Facebook</ClientsLink>
+        <ClientsLink to={ROUTES.GOOGLE}>Google</ClientsLink>
+        <ClientsLink to="/clients/amazon">Amazon</ClientsLink>
+      </NavContainer>
+    </PageWrapper>
   );
 }
+
+export default Clients;
