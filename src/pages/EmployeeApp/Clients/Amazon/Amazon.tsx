@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { PageWrapper, ButtonControl, Title } from "./styles";
+import { ButtonControl, Title } from "./styles";
+// import { PageWrapper, ButtonControl, Title } from "./styles";
 import Button from "components/Button/Button";
+import ClientTemplate from "../components/ClientTeamlate/ClientTemplete";
 
 export default function Amazon() {
   const navigate = useNavigate();
@@ -10,7 +12,8 @@ export default function Amazon() {
   };
 
   return (
-    <PageWrapper>
+    <ClientTemplate>
+    {/* <PageWrapper> */}
       <Title>Amazon</Title>
       <p>
         Amazon is one of the largest multinational companies in e-commerce and
@@ -22,6 +25,7 @@ export default function Amazon() {
       <ButtonControl>
         <Button onClick={goBack} name="Go back" />
       </ButtonControl>
-    </PageWrapper>
+    {/* </PageWrapper> */}
+  </ClientTemplate>
   );
 }

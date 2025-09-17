@@ -2,13 +2,12 @@
 import { useState, createContext } from "react";
 import Button from "components/Button/Button";
 
-import Section from "lessons/Lesson_13/components/Section/Section";
-// import Section from "lessons/Lesson_13/components/Section/Section";
+import Section from "lessons/lesson_13/components/Section/Section";
 
 import { MainTitle, MainWrapper } from "./styles";
 import { type UserData, type UserDataContext } from "./types";
 
-// ШАГ 2: Создаем контекст - хранилище данных, которое мы хотим передать в любой компонент, который находится уровнем ниже
+// ШАГ 2: Создаем контекст - хранилище данных createContext, которое мы хотим передать в любой компонент, который находится уровнем ниже
 export const MainContext = createContext<UserDataContext>({
   userData: undefined,
   setUserData: () => {},

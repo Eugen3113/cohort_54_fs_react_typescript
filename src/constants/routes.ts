@@ -7,6 +7,7 @@ export interface ROUTES_DATA {
   APPLE: string;
   GOOGLE: string;
   FACEBOOK: string;
+  AMAZON: string;
   NOT_FOUND: string;
 }
 
@@ -17,8 +18,9 @@ export const ROUTES: ROUTES_DATA = {
   LOGIN: "/login",
   CLIENTS: "/clients",
   APPLE: "/clients/apple",
-  GOOGLE: "/clients/facebook",
-  FACEBOOK: "/clients/google",
+  GOOGLE: "/clients/google",
+  FACEBOOK: "/clients/facebook",
+  AMAZON: "/clients/amazon",
   NOT_FOUND: "*",
 };
 

@@ -6,7 +6,7 @@ import Home from "pages/EmployeeApp/Home/Home";
 import ContactUs from "pages/EmployeeApp/ContactUs/ContactUs";
 import About from "pages/EmployeeApp/About/About";
 import Clients from "pages/EmployeeApp/Clients/Clients";
-import Login from "pages/EmployeeApp/Login/Login"; // или LogIn, если ты решил так
+import Login from "pages/EmployeeApp/Login/Login"; // или LogIn
 import Apple from "pages/EmployeeApp/Clients/Apple/Apple";
 import Facebook from "pages/EmployeeApp/Clients/Facebook/Facebook";
 import Google from "pages/EmployeeApp/Clients/Google/Google";
@@ -31,6 +31,7 @@ import Homework_07 from "homeworks/Homework_07/Homework_07";
 import Homework_08 from "homeworks/Homework_08/Homework_08";
 import Homework_09 from "homeworks/Homework_09/Homework_09";
 import Homework_11 from "homeworks/Homework_11/Homework_11";
+import Homework_13 from "homeworks/Homework_13/Homework_13";
 
 // Consultation
 import Sandwich from "./consultation/Sandwich/Sandwich";
@@ -39,7 +40,7 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Layout>
+      {/* <Layout>
         <Routes>
           <Route path={ROUTES.HOME} element={<Home />} />
           <Route path={ROUTES.CONTACT_US} element={<ContactUs />} />
@@ -49,10 +50,10 @@ function App() {
           <Route path={ROUTES.APPLE} element={<Apple />} />
           <Route path={ROUTES.FACEBOOK} element={<Facebook />} />
           <Route path={ROUTES.GOOGLE} element={<Google />} />
-          <Route path="/clients/amazon" element={<Amazon />} />
+          <Route path={ROUTES.AMAZON} element={<Amazon />} />
           <Route path={ROUTES.NOT_FOUND} element="Page Not Found" />
         </Routes>
-      </Layout>
+      </Layout> */}
 
       {/* Lessons */}
       {/* <Lesson_06 /> */}
@@ -69,6 +70,7 @@ function App() {
       {/* <Homework_08 /> */}
       {/* <Homework_09 /> */}
       {/* <Homework_11 /> */}
+      {/* <Homework_13 /> */}
 
       {/* consultations */}
       {/* <Sandwich /> */}
@@ -78,5 +80,5 @@ function App() {
 
 export default App;
 
-//?  <Route path="*" element="Page Not Found" />       (строка 46),
+//?  <Route path="*" element="Page Not Found" />       (строка 54),
 //?   все пути непрописанные выше , выдадут  "Page Not Found"

@@ -5,6 +5,11 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "jsx": "react-jsx",               // 👈 Обязательно для React 17+
+    "esModuleInterop": true,         // 👈 Для корректного импорта CommonJS
+    "types": ["react", "react-dom"],  // 👈 Явно подключаем типы
+
+
 
     /* Bundler mode */
     "moduleResolution": "bundler",

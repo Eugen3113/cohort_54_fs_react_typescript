@@ -27,6 +27,7 @@ export const Logo = styled.div`
 export const LogoImg = styled.img`
   width: 100%;
   height: 100%;
+  background-color: white;
 `;
 
 export const NavigationContainer = styled.nav`

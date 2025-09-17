@@ -4,6 +4,7 @@ import ClientTemplate from "pages/EmployeeApp/Clients/components/ClientTeamlate/
 function Apple() {
   return (
     <ClientTemplate>
+      {/* описание */}
       Apple Inc. is an American multinational corporation and technology company
       headquartered in Cupertino, California, in Silicon Valley.
     </ClientTemplate>

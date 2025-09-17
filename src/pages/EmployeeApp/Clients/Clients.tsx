@@ -4,6 +4,7 @@ import { PageWrapper, NavContainer, ClientsLink, Title } from "./styles";
 
 function Clients() {
   useEffect(() => {
+    // Unmounting   . При уходе на другую страницу компонент умирает
     return () => {
       console.log("Unmounting Clients Component");
     };
@@ -16,7 +17,7 @@ function Clients() {
         <ClientsLink to={ROUTES.APPLE}>Apple</ClientsLink>
         <ClientsLink to={ROUTES.FACEBOOK}>Facebook</ClientsLink>
         <ClientsLink to={ROUTES.GOOGLE}>Google</ClientsLink>
-        <ClientsLink to="/clients/amazon">Amazon</ClientsLink>
+        <ClientsLink to={ROUTES.AMAZON}>Amazon</ClientsLink>
       </NavContainer>
     </PageWrapper>
   );

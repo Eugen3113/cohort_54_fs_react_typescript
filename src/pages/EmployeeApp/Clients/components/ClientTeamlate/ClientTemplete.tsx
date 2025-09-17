@@ -9,12 +9,13 @@ function ClientTemplate({ children }: ClientTemplateProps) {
   const navigate = useNavigate();
 
   const goback = () => {
-    navigate(-1);
+    navigate(-1);             // возвращаемся на одну страницу назад(0-никуда)
   };
 
   return (
-    <PageWrapper>
-      <Description>{children}</Description>
+    <PageWrapper>  
+                             {/* Description- принимает описание (оно разное у Amazon,Apple,Facebook,Google) */}
+      <Description>{children}</Description>    
       <ButtonControl>
         <Button name="Go back" onClick={goback} />
       </ButtonControl>
